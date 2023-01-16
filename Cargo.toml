@@ -1,20 +1,27 @@
 [package]
 name = "cloudflareddns"
-version = "0.1.0"
+version = "1.0.1"
 edition = "2021"
+
+description = "An application for dynamic DNS using Cloudflare API"
+readme = "README.md"
+repository = "https://github.com/Bluheir/cloudflareddns/"
+license = "MIT"
+
+publish = false
 
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
 [dependencies]
-tokio = { version = "*", features = ["full"]}
-tracing = "*"
-tracing-subscriber = "*"
-futures = { version = "*" }
+tokio = { version = "1.24.1", features = ["full"]}
+tracing = "0.1.37"
+tracing-subscriber = "0.3.16"
+futures = { version = "0.3.25" }
 
-serde = { version = "*", features = ["derive"] }
-serde_json = "*"
-toml = "*"
+serde = { version = "1.0.152", features = ["derive"] }
+serde_json = "1.0.91"
+toml = "0.5.10"
 
-thiserror = "*"
-reqwest = { version = "*", features = ["json"]}
+thiserror = "1.0.38"
+reqwest = { version = "0.11.13", features = ["json"]}
 public-ip = "0.2.2"
