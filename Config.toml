@@ -13,7 +13,7 @@ zone_id = ""
 api_key = ""
 
     [[domains.entries]]
-    # DNS record name (or @ for the zone apex). (Required)
+    # DNS record name (Make sure to use fully qualified name ONLY, otherwise it won't work). (Required)
     name = "something.com"
     # Time to live, in seconds, of the DNS record. Must be between 60 and 86400, or 1 for 'automatic'. (Optional, default is 1)
     ttl = 1
