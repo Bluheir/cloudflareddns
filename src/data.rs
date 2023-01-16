@@ -18,7 +18,6 @@ pub struct Settings {
 #[derive(Serialize, Deserialize, Clone)]
 pub struct DomainInfo {
     pub zone_id : String,
-    pub id : String,
     pub api_key : String,
     pub entries : Vec<Entry>
 }
@@ -49,10 +48,25 @@ pub struct DnsUpdate {
     pub content : String
 }
 
-#[derive(Serialize, Deserialize, Clone)]
+#[derive(Serialize, Deserialize, Clone, Debug)]
 pub struct Response {
     pub success : bool,
-    pub errors : Vec<CloudFlareError>
+    pub errors : Vec<CloudFlareError>,
+}
+#[derive(Serialize, Deserialize, Clone, Debug)]
+pub struct ExtendedResponse<T> {
+    #[serde(flatten)]
+    pub response : Response,
+    pub result : T
+}
+
+#[derive(Serialize, Deserialize, Clone, Debug)]
+pub struct DnsRecord {
+    pub content : String,
+    pub id : String,
+    pub name : String,
+    #[serde(rename = "type")]
+    pub record_type : String,
 }
 
 pub fn default_type() -> String {
