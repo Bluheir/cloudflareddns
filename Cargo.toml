@@ -1,0 +1,20 @@
+[package]
+name = "cloudflareddns"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+tokio = { version = "*", features = ["full"]}
+tracing = "*"
+tracing-subscriber = "*"
+futures = { version = "*" }
+
+serde = { version = "*", features = ["derive"] }
+serde_json = "*"
+toml = "*"
+
+thiserror = "*"
+reqwest = { version = "*", features = ["json"]}
+public-ip = "0.2.2"

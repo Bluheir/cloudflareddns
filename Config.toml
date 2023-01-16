@@ -1,0 +1,39 @@
+[settings]
+# The interval to check the IP address for changes 
+ip_poll = 20000
+
+# Update domain entries upon start
+update_upon_start = false
+
+[[domains]]
+# Zone ID of the domain
+zone_id = ""
+
+# ID of the domain
+id = ""
+
+# API key used for changing the domain
+api_key = ""
+
+    [[domains.entries]]
+    # DNS record name (or @ for the zone apex). (Required)
+    name = "something.com"
+    # Time to live, in seconds, of the DNS record. Must be between 60 and 86400, or 1 for 'automatic'. (Optional, default is 1)
+    ttl = 1
+    # Whether the record is receiving the performance and security benefits of Cloudflare. (Optional)
+    proxied = false
+    # Record type of the DNS record. Should be "A" for IPv4, or "AAAA" for IPv6. (Required)
+    type = "A"
+    # Comments or notes about the DNS record. This field has no effect on DNS responses. (Optional)
+    comment = "Changed to IP Address"
+    # Custom tags for the DNS record. This field has no effect on DNS responses. (Optional)
+    tags = []
+
+    [[domains.entries]]
+    name = "*.something.com"
+    ttl = 1
+    proxied = false
+    type = "A"
+    comment = "Changed to IP Address"
+    # tags = ["tag1"]
+
