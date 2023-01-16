@@ -9,9 +9,6 @@ update_upon_start = false
 # Zone ID of the domain
 zone_id = ""
 
-# ID of the domain
-id = ""
-
 # API key used for changing the domain
 api_key = ""
 
@@ -36,4 +33,3 @@ api_key = ""
     type = "A"
     comment = "Changed to IP Address"
     # tags = ["tag1"]
-
