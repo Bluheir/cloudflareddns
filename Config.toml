@@ -9,7 +9,7 @@ update_upon_start = false
 # Zone ID of the domain
 zone_id = ""
 
-# API key used for changing the domain
+# API token used for changing the domain. Note, the API token is the only supported type of authorization.
 api_key = ""
 
     [[domains.entries]]
